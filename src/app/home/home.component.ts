@@ -14,15 +14,16 @@ import { FormModalComponent } from '../shared/ui/form-modal/form-modal.component
       <button (click)="checklistBeingEdited.set({})">Add Quicklist</button>
     </header>
     <app-modal [isOpen]="!!checklistBeingEdited()">
-      <app-form-modal
-        [title]="
-          checklistBeingEdited()?.title
-            ? checklistBeingEdited()!.title!
-            : 'Add checklist'
-        "
-        [formGroup]="checklistForm"
-        ]
-      />
+      <ng-template>
+        <app-form-modal
+          [title]="
+            checklistBeingEdited()?.title
+              ? checklistBeingEdited()!.title!
+              : 'Add checklist'
+          "
+          [formGroup]="checklistForm"
+        />
+      </ng-template>
     </app-modal>
   `,
   styles: [],
