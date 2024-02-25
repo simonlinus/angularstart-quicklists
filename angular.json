@@ -88,7 +88,8 @@
               "buildTarget": "angularstart-quicklists:build:production"
             },
             "development": {
-              "buildTarget": "angularstart-quicklists:build:development"
+              "buildTarget": "angularstart-quicklists:build:development",
+              "port": 4213
             }
           },
           "defaultConfiguration": "development"
