@@ -82,14 +82,6 @@ export class ChecklistItemService {
       }));
     });
 
-    this.checklistItemsLoaded$.subscribe((checklistItems) => {
-      this.#state.update((state) => ({
-        ...state,
-        checklistItems,
-        loaded: true,
-      }));
-    });
-
     this.checklistItemsLoaded$.subscribe({
       next: (checklistItems) =>
         this.#state.update((state) => ({
